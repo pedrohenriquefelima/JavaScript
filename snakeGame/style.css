@@ -1,0 +1,10 @@
+h1,
+h2 {
+  font-family: Lato;
+}
+#container {
+  text-align: center;
+}
+canvas {
+  background-color: black;
+}
