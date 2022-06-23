@@ -79,6 +79,7 @@ $(function () {
           gameOverLoser();
         }
         if (didEatFood(object.x, object.y)) {
+          //if the food has been eaten change value to true
           score += 1;
           $('#score').text(score);
           growingSnake();
@@ -109,9 +110,12 @@ $(function () {
   function didEatFood(x, y) {
     return food.x == x && food.y == y;
   }
+  
+
   function drawingFood() {
     context.fillStyle = 'green';
     if (food.eaten == true) {
+      console.log("drawing new food");
       food = newFoodPosition();
     }
     context.fillRect(food.x, food.y, squareWidth + 1, squareHeight + 1);
@@ -160,10 +164,18 @@ $(function () {
         arrayY.push(value.y);
       }
     });
-    xy = getXandY(arrayX, arrayY);
-    console.log(xy);
+    let funcValue = getXandY(arrayX, arrayY);
+    if(funcValue) {
+      xy = funcValue;
+      console.log("with value: " + JSON.stringify(xy));
+    } else {
+      //this line of code is impeding xy to be null;
+      console.log("xy: null");
+      return { x: 100, y: 150, eaten: false };
+    }
     return xy;
   }
+
   function getXandY(arX, arY) {
     let newX, newY;
     // newX = getRamdomNumber(canvas.width - 10, 10);
@@ -176,13 +188,16 @@ $(function () {
     if ($.inArray(newX, arX) == -1 && $.inArray(newY, arY) == -1) {
       return { x: newX, y: newY, eaten: false };
     } else {
+      console.log("else  newX: " + newX);
+      console.log("else  newY: " + newY);
       getXandY(arX, arY);
     }
   }
+
   function getRamdomNumber(maxNumber, multipleOf) {
     let result = Math.floor(Math.random() * maxNumber);
     result = result % 10 == 0 ? result : result + (multipleOf - (result % 10));
+    console.log("result : " + result);
     return result;
   }
-  //a change to the code
 });
