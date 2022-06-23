@@ -1,0 +1,59 @@
+<html>
+  <head>
+    <title>Coin Keeper</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="https://kit.fontawesome.com/0ce964038c.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="https://img.lovepik.com/free-png/20210928/lovepik-game-shopping-consumption-gold-coins-png-image_401751616_wh1200.png">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css" type="text/css">
+  </head>
+  <body>
+    <div class="game-container">
+    </div>
+    <div class="player-info">
+        <div>
+          <label for="player-name">Your Name</label>
+          <input id="player-name" maxlength="10" type="text" />
+        </div>
+        <div>
+          <button id="player-color">Change Color</button>
+        </div>
+    </div>
+
+    <div class="popup center">
+        <div class="icon">
+            <i class="fa-solid fa-face-sad-cry"></i>
+        </div>
+        <div class="title">
+            GAME OVER!!
+        </div>
+        <div class="description">
+
+        </div>
+        <div class="dismiss-btn">
+            <button id="dismiss-popup-btn">
+                Dismiss
+            </button>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+    <script>
+        const firebaseConfig = {
+          apiKey: "AIzaSyAGntkiplvwhkqERQfBi_mpR9Fz17aIYRk",
+          authDomain: "coin-keeper-e91bd.firebaseapp.com",
+          databaseURL: "https://coin-keeper-e91bd-default-rtdb.firebaseio.com",
+          projectId: "coin-keeper-e91bd",
+          storageBucket: "coin-keeper-e91bd.appspot.com",
+          messagingSenderId: "176873360113",
+          appId: "1:176873360113:web:2398768eccef10dced7750",
+          measurementId: "G-4DM9X20WN5"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="KeyPressListener.js"></script>
+    <script src="app.js"></script>
+    </body>
+</html>

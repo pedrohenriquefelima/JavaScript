@@ -1,0 +1,231 @@
+  body,html {
+    text-align: center;
+    background-color: linear-gradient(45deg,white,blue,yellow );
+  }
+  *  {
+    font-family: 'Montserrat', sans-serif;
+  }
+  #bordCanvas {
+    width: 90vw;
+    height: 80vh;
+    background-color: black;
+  }
+  .header {
+    text-align: center;
+    padding: 20px;
+  }
+  /*Buttons start, pause and restart*/
+  .essentials-button {
+    width: 130px;
+    height: 40px;
+    margin: 0 15px;
+  }
+  #start {
+    background-color: blue;
+    border: 5px solid green;
+    color:white;
+  }
+  #start:hover {
+    background-color: orange;
+    border: 5px solid green;
+  }
+
+  #pause {
+    background-color: orange;
+    border: 5px solid blue;
+    color:white;
+  }
+  #pause:hover {
+    background-color: blue;
+    border: 5px solid orange;
+  }
+  .restartGame {
+    background-color: purple;
+    border: 5px solid pink;
+    color:white;
+  }
+  .restartGame:hover {
+    background-color: pink;
+    border: 5px solid purple;
+  }
+  /*Styling modal*/
+  .form {
+    padding: 10px 20px;
+    font-size: 20px;
+  }
+  .modal {
+    max-width: 60ch;
+    border: 2px solid blue;
+    border-radius: 10px;
+  }
+  .modal-header {
+    align-items: center;
+    color:blue;
+  }
+  .header-text {
+    text-align: center;
+    margin:0 0 10px 0;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+  }
+  .close-little-box{
+    background-color: blue;
+    color:white;
+    padding: 3px 5px;
+    border-radius: 3px;
+    cursor: default;
+  }
+  .modal::backdrop {
+    background:linear-gradient(45deg,white,blue,yellow );
+    opacity: 0.4;
+  }
+  .user-input-box {
+    width: 100%;
+    display: flex;
+    margin: 20px 0;
+    justify-content: space-evenly;
+  }
+  .name-input {
+    width: 120px;
+    margin: 0 5px;
+  }
+  .horse-input {
+    width:30px;
+    margin: 0 5px;
+  }
+  .modal-footer {
+    display: flex;
+    justify-content: end;
+    margin: 20px 0 0 0;
+  }
+  .cancel-button {
+    height: 25px;
+    margin: 0 10px;
+    background-color: pink;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+  }
+  /* .button-submit {
+    height: 25px;
+    margin: 0 0;
+    background-color: green;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+  } */
+  .close-little-box:hover,
+  .button-submit:hover,
+  .cancel-button:hover {
+    opacity: 0.8;
+  }
+  .validation-text {
+    color:red;
+  }
+  /*winners/losers modal */
+  .winners-modal {
+    max-width: 70ch;
+    border: 2px solid blue;
+    border-radius: 10px;
+  }
+  .losers-modal {
+    max-width: 70ch;
+    border: 2px solid red;
+    border-radius: 10px;
+  }
+  .winners-modal::backdrop {
+    background:linear-gradient(45deg,white,rgb(241, 220, 168),rgb(141, 235, 124) );
+    opacity: 0.4;
+  }
+  .losers-modal::backdrop {
+    background:linear-gradient(45deg,white,rgb(232, 218, 139),rgb(231, 155, 155) );
+    opacity: 0.4;
+  }
+  .winner-text-first {
+    margin: 20px 10px 5px 10px;
+  }
+  .winner-text-second {
+    margin: 20px 10px 10px 10px;
+  }
+  .winners-title {
+    font-size:50px;;
+    color:yellow;
+    -webkit-text-fill-color: yellow; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+  }
+  
+  .losers-text {
+    font-size:50px;
+    margin:10px 20px;
+    color:white;
+    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: red;
+  }
+  #winnersList {
+    font-size: 30px;
+    color:black;
+    list-style: none;
+  }
+  .horse-info {
+    font-size:30px;
+    margin:20px 15px;
+    font-family: 'Montserrat', sans-serif;
+  }
+  .horse-info > * {
+    background: -webkit-linear-gradient(rgb(31, 31, 115),rgb(196, 142, 106), rgb(30, 29, 28));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+  }
+  .button-game{
+    position: relative;
+    display: inline-flex;
+    width: 180px;
+    height: 55px;
+    margin: 0 15px;
+    perspective: 1000px;
+  }
+  .button-inner {
+    font-size: 19px;
+    letter-spacing: 1px;
+    transform-style: preserve-3d;
+    transform: translateZ(-25px);
+    transition: transform .25s;
+    font-family: 'Montserrat', sans-serif;
+    
+  }
+  .lets-play-inner:before,
+  .lets-play-inner:after {
+    content: "Let's Play";
+  }
+  .button-inner-restart:before,
+  .button-inner-restart:after {
+    content: "RESTART";
+  }
+  .button-inner:before,
+  .button-inner:after{
+    position: absolute;
+    height: 55px;
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid orange;
+    box-sizing: border-box;
+    border-radius: 5px;
+  }
+  .button-inner:before{
+    color: #fff;
+    background: blue;
+    transform: rotateY(0deg) translateZ(25px);
+  }
+  .button-inner:after{
+    color: #000;
+    transform: rotateX(90deg) translateZ(25px);
+  }
+  .button-inner:hover{
+    transform: translateZ(-25px) rotateX(-90deg);
+  }

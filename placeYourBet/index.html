@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Gambling</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Place Your Bet!</h1>
+      <button class="essentials-button" id="start">Start</button>
+      <button class="essentials-button restartGame reloadPage">Restart</button>
+    </div>
+    <canvas id="bordCanvas"> </canvas>
+    <dialog class="modal" id="modal">
+      <div class="modal-header">
+        <p class="header-text">Add Users</p>
+      </div> 
+      <form class="form" method="dialog">
+        <p class="validation-text">At least one bet should be placed - you stupid!</p>
+        <div class="user-input-box">
+          <label for="name1">Name</label><br>
+          <input class="name-input" type="text" id="name1" name="name1" value="">
+          <label for="horsebet1">Horse</label>
+          <input class="horse-input" type="number" id="horsebet1" name="horsebet1" value="0">
+        </div>
+        <div class="user-input-box">
+          <label for="name2">Name</label><br>
+          <input class="name-input" type="text" id="name2" name="name2" value="">
+          <label for="horsebet2">Horse</label>
+          <input class="horse-input" type="number" id="horsebet2" name="horsebet2" value="0">
+        </div>
+        <div class="user-input-box">
+          <label for="name3">Name</label><br>
+          <input class="name-input" type="text" id="name3" name="name3" value="">
+          <label for="horsebet3">Horse</label>
+          <input class="horse-input" type="number" id="horsebet3" name="horsebet3" value="0">
+        </div>
+        <div class="user-input-box">
+          <label for="name4">Name</label><br>
+          <input class="name-input" type="text" id="name4" name="name4" value="">
+          <label for="horsebet4">Horse</label>
+          <input class="horse-input" type="number" id="horsebet4" name="horsebet4" value="0">
+        </div>
+        <div class="user-input-box">
+          <label for="name5">Name</label><br>
+          <input class="name-input" type="text" id="name5" name="name5" value="">
+          <label for="horsebet5">Horse</label>
+          <input class="horse-input" type="number" id="horsebet5" name="horsebet5" value="0">
+        </div>
+        <div class="user-input-box">
+          <label for="name6">Name</label><br>
+          <input class="name-input" type="text" id="name6" name="name6" value="">
+          <label for="horsebet6">Horse</label>
+          <input class="horse-input" type="number" id="horsebet6" name="horsebet6" value="0">
+        </div>
+      </form>
+      <div class="modal-footer">
+        <!-- <button class="cancel-button" type="button">Not ready yet</button> -->
+        <span id="button-submit" class="button-game" type="submit"><span class="lets-play-inner button-inner"></span></span>
+      </div>
+  </dialog>
+  <dialog class="winners-modal" id="winnersModal">
+    <h1 class="winners-title winner-text-first">Winners!!</h1>
+    <h1 class="winners-title winner-text-second">Let's win again!!</h1>
+    <h1 class="losers-text" id="losers-title"></h1>
+    <div class="horse-info">
+      <h3 id="horsePosition"></h3>
+      <h3 id="horseColor"></h3>
+    </div>
+    <span class="button-game reloadPage"><span class="button-inner button-inner-restart"></span></span>
+  </dialog>
+  </body>
+</html>
