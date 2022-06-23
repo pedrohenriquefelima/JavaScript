@@ -184,4 +184,5 @@ $(function () {
     result = result % 10 == 0 ? result : result + (multipleOf - (result % 10));
     return result;
   }
+  //a change to the code
 });
